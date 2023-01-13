@@ -1,0 +1,24 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE = 1
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
+%:
+	dh $@ --buildsystem=cmake --builddirectory=build
+
+override_dh_auto_configure:
+
+override_dh_auto_build:
+	make CMAKE_BUILD_TYPE=Release
+
+override_dh_auto_install:
+	make CMAKE_INSTALL_PREFIX=usr install
+
+override_dh_gencontrol:
+	dh_gencontrol -- -Vneovim:Depends=
+
+override_dh_auto_test-indep:
+
+override_dh_auto_test-arch:
