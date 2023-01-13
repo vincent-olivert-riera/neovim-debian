@@ -1,0 +1,20 @@
+neovim: no-copyright-file
+neovim: executable-not-elf-or-script usr/share/nvim/runtime/macros/less.bat
+neovim: initial-upload-closes-no-bugs
+neovim: national-encoding usr/share/nvim/runtime/keymap/accents.vim
+neovim: national-encoding usr/share/nvim/runtime/keymap/canfr-win.vim
+neovim: national-encoding usr/share/nvim/runtime/keymap/esperanto_utf-8.vim
+neovim: national-encoding usr/share/nvim/runtime/keymap/greek_cp1253.vim
+neovim: national-encoding usr/share/nvim/runtime/keymap/greek_iso-8859-7.vim
+neovim: national-encoding usr/share/nvim/runtime/keymap/greek_utf-8.vim
+neovim: national-encoding usr/share/nvim/runtime/keymap/hebrew_iso-8859-8.vim
+neovim: national-encoding usr/share/nvim/runtime/keymap/hebrewp_cp1255.vim
+neovim: national-encoding usr/share/nvim/runtime/keymap/hebrewp_utf-8.vim
+neovim: national-encoding usr/share/nvim/runtime/keymap/serbian_cp1250.vim
+neovim: national-encoding usr/share/nvim/runtime/keymap/serbian_cp1251.vim
+neovim: national-encoding usr/share/nvim/runtime/keymap/serbian_iso-8859-2.vim
+neovim: national-encoding usr/share/nvim/runtime/keymap/serbian_iso-8859-5.vim
+neovim: national-encoding usr/share/nvim/runtime/keymap/slovak_cp1250.vim
+neovim: national-encoding usr/share/nvim/runtime/keymap/slovak_iso-8859-2.vim
+neovim: shared-library-lacks-prerequisites usr/lib/nvim/parser/c.so
+neovim: shared-library-lacks-prerequisites usr/lib/nvim/parser/help.so
