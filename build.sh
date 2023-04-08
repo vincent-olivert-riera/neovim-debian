@@ -4,7 +4,7 @@
 
 set -eu
 
-VERSION=0.8.3
+VERSION=0.9.0
 TOPDIR="${PWD}"
 
 echo "Create build directory"
@@ -23,9 +23,9 @@ cp -R ../../debian .
 
 echo "Install build dependencies"
 sudo mk-build-deps \
---install \
---tool="apt-get -o Debug::pkgProblemResolver=yes --no-install-recommends --yes" \
-debian/control
+    --install \
+    --tool="apt-get -o Debug::pkgProblemResolver=yes --no-install-recommends --yes" \
+    debian/control
 
 echo "Build package"
 debuild -b -us -uc
