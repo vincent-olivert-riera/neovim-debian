@@ -4,7 +4,8 @@
 
 set -eu
 
-VERSION=0.9.0
+NAME="neovim"
+VERSION="0.9.0"
 TOPDIR="${PWD}"
 
 echo "Create build directory"
@@ -13,12 +14,12 @@ mkdir build
 cd build
 
 echo "Download sources"
-wget https://github.com/neovim/neovim/archive/refs/tags/v"${VERSION}".tar.gz
+wget https://github.com/"${NAME}"/"${NAME}"/archive/refs/tags/v"${VERSION}".tar.gz
 
 echo "Prepare sources"
-mv v"${VERSION}".tar.gz neovim_"${VERSION}".orig.tar.gz
-tar xf neovim_"${VERSION}".orig.tar.gz
-cd neovim-"${VERSION}"
+mv v"${VERSION}".tar.gz "${NAME}"_"${VERSION}".orig.tar.gz
+tar xf "${NAME}"_"${VERSION}".orig.tar.gz
+cd "${NAME}"-"${VERSION}"
 cp -R ../../debian .
 
 echo "Install build dependencies"
@@ -31,13 +32,13 @@ echo "Build package"
 debuild -b -us -uc
 
 echo "Test installation"
-dpkg --dry-run -i ../neovim_"${VERSION}"*.deb
+dpkg --dry-run -i ../"${NAME}"_"${VERSION}"*.deb
 
 echo "Delete debug deb files"
-rm -f ../neovim*-dbgsym_"${VERSION}"*.deb
+rm -f ../"${NAME}"*-dbgsym_"${VERSION}"*.deb
 
 echo "Move package to the top directory"
-mv ../neovim_"${VERSION}"*.deb "${TOPDIR}"/
+mv ../"${NAME}"_"${VERSION}"*.deb "${TOPDIR}"/
 
 # Return to the top directory
 cd "${TOPDIR}"
