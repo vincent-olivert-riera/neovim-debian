@@ -5,7 +5,7 @@
 set -eu
 
 NAME="neovim"
-VERSION="0.9.0"
+VERSION="0.9.1"
 TOPDIR="${PWD}"
 
 echo "Create build directory"
